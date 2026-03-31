@@ -1,0 +1,142 @@
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 100%;
+  background: #fdf6f0;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #e8d5c4;
+  padding-bottom: 16px;
+}
+
+.cart-header h2 {
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.cart-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #3a3a3a;
+}
+
+.cart-empty {
+  color: #999;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-item-info p {
+  font-size: 14px;
+}
+
+.cart-item-price {
+  color: #c9856a;
+}
+
+.cart-footer {
+  border-top: 1px solid #e8d5c4;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.cart-checkout {
+  background-color: #c9856a;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.cart-checkout:hover {
+  background-color: #b8705a;
+}
+
+.cart-item-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  font-size: 14px;
+  margin-left: auto;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.cart-item-remove:hover {
+  color: #c9856a;
+}
+
+@media (max-width: 768px) {
+  .cart-drawer {
+    width: 100%;
+  }
+}

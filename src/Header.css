@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #e8d5c4;
+  margin-bottom: 48px;
+}
+
+.header-logo {
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: #c9856a;
+}
+
+.header-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #3a3a3a;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.header-nav a:hover {
+  color: #c9856a;
+}
+
+.varukorg-ikon {
+  position: relative;
+}
+
+.varukorg-badge {
+  background-color: #c9856a;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .header-nav {
+    gap: 16px;
+  }
+}
