@@ -101,9 +101,9 @@ A fully functional e-commerce store built with React, targeting women aged 25-40
 
 ## About the Project
 
-This project was built as part of a fullstack development education, with the goal of creating something real — not just a school exercise. The store is connected to a live Printful account, meaning products are real and the store could be launched as an actual business.
+This project was built as part of a fullstack development education, with the goal of creating something real. The store is connected to a live Printful account, meaning products are real and the store could be launched as an actual business.
 
-The target audience is women aged 25-40 who make impulse-driven purchases based on identity and humor. Products like mugs and tote bags with bold, relatable messages perform well in this demographic, especially ahead of the holiday season.
+The target audience is women aged 25-40 who make impulse-driven purchases based on identity and humor. Products like mugs and tote bags with bold, relatable messages perform well in this demographic.
 
 ## Features
 
