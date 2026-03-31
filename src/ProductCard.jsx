@@ -15,10 +15,10 @@ function ProductCard({ product, läggTill }) {
   return (
     <Link to={`/produkt/${product.id}`} className="product-card-link">
       <div className="product-card">
-        <img src={product.image} alt={product.name} />
+        <img src={product.thumbnail_url || product.image} alt={product.name} />
         <div className="product-info">
           <h2>{product.name}</h2>
-          <p className="product-price">{product.price} kr</p>
+          <p className="product-price">{product.price ? `${product.price} kr` : ''}</p>
           <button 
             className={`product-button ${tillagd ? 'tillagd' : ''}`}
             onClick={hanteraKlick}
