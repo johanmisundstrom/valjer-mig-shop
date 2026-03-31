@@ -1,0 +1,84 @@
+.orderöversikt {
+  padding: 48px 0;
+}
+
+.orderöversikt h1 {
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: 48px;
+  color: #c9856a;
+}
+
+.orderöversikt-innehåll {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.orderöversikt h2 {
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e8d5c4;
+  padding-bottom: 12px;
+}
+
+.orderöversikt-produkt {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.orderöversikt-produkt img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.orderöversikt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orderöversikt-form input {
+  padding: 12px;
+  border: 1px solid #e8d5c4;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  color: #3a3a3a;
+  outline: none;
+}
+
+.orderöversikt-form input:focus {
+  border-color: #c9856a;
+}
+
+.orderöversikt-form button {
+  background-color: #c9856a;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.orderöversikt-form button:hover {
+  background-color: #b8705a;
+}
+
+@media (max-width: 768px) {
+  .orderöversikt-innehåll {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

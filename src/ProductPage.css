@@ -55,3 +55,36 @@
     gap: 32px;
   }
 }
+
+.product-page-quantity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 8px 0;
+}
+
+.product-page-quantity button {
+  background: none;
+  border: 1px solid #c9856a;
+  color: #c9856a;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.product-page-quantity button:hover {
+  background-color: #c9856a;
+  color: white;
+}
+
+.product-page-quantity span {
+  font-size: 20px;
+  min-width: 24px;
+  text-align: center;
+}

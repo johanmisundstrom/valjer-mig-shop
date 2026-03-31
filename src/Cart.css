@@ -140,3 +140,8 @@
     width: 100%;
   }
 }
+
+.cart-item-antal {
+  font-size: 12px;
+  color: #999;
+}
