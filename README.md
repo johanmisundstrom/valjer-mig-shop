@@ -10,9 +10,9 @@ En fullt fungerande webbshop byggd med React, riktad mot kvinnor 25-40 år med h
 
 ## Om projektet
 
-Det här projektet är byggt som en del av en fullstackutbildning, med målet att skapa något på riktigt — inte bara en skolövning. Butiken är kopplad mot ett riktigt Printful-konto, vilket betyder att produkterna är verkliga och att butiken skulle kunna lanseras som en riktig verksamhet.
+Det här projektet är byggt som en del av en fullstackutbildning, med målet att skapa något på riktigt. Butiken är kopplad mot ett riktigt Printful-konto, vilket betyder att produkterna är verkliga och att butiken skulle kunna lanseras som en riktig verksamhet.
 
-Målgruppen är kvinnor 25-40 år som gör impulsbaserade köp utifrån identitet och humor. Produkter som muggar och tote bags med tydliga, relatabla budskap presterar bra i den här målgruppen, särskilt inför julhandeln.
+Målgruppen är kvinnor 25-40 år som gör impulsbaserade köp utifrån identitet och humor. Produkter som muggar och tote bags med tydliga, relaterbara budskap presterar bra i den här målgruppen enligt statistik.
 
 ## Funktioner
 
