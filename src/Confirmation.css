@@ -3,52 +3,65 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 96px 0;
+  padding: 120px 20px;
   text-align: center;
   gap: 24px;
 }
 
 .confirmation-icon {
-  width: 80px;
-  height: 80px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  background-color: #c9856a;
-  color: white;
-  font-size: 40px;
+  background-color: #1a1a1a;
+  color: #faf9f7;
+  font-size: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .confirmation h1 {
-  font-size: 32px;
-  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 400;
   letter-spacing: 2px;
-  color: #3a3a3a;
+  color: #1a1a1a;
 }
 
 .confirmation p {
   color: #666;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.9;
   max-width: 400px;
 }
 
 .confirmation-button {
-  background-color: #c9856a;
-  color: white;
+  background-color: #1a1a1a;
+  color: #faf9f7;
   border: none;
-  padding: 16px 32px;
-  border-radius: 6px;
+  padding: 14px 32px;
+  border-radius: 0;
   cursor: pointer;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition: opacity 0.2s ease;
   margin-top: 16px;
+  display: inline-block;
 }
 
 .confirmation-button:hover {
-  background-color: #b8705a;
+  opacity: 0.75;
+}
+
+@media (max-width: 480px) {
+  .confirmation {
+    padding: 80px 20px;
+  }
+
+  .confirmation h1 {
+    font-size: 28px;
+  }
 }

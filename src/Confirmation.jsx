@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import './Confirmation.css'
 
+// visas efter att användaren lagt sin order
 function Confirmation() {
   return (
     <div className="confirmation">

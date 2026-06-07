@@ -2,46 +2,54 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
-  border-bottom: 1px solid #e8d5c4;
-  margin-bottom: 48px;
+  padding: 28px 0;
+  border-bottom: 1px solid #e8e2da;
+  margin-bottom: 0;
 }
 
 .header-logo {
-  font-size: 28px;
-  font-weight: normal;
-  letter-spacing: 3px;
-  color: #c9856a;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: #1a1a1a;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .header-nav {
   display: flex;
-  gap: 32px;
+  align-items: center;
+  gap: 36px;
 }
 
 .header-nav a {
   text-decoration: none;
-  color: #3a3a3a;
-  font-size: 14px;
-  letter-spacing: 1px;
+  color: #1a1a1a;
+  font-size: 11px;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
 }
 
 .header-nav a:hover {
-  color: #c9856a;
+  opacity: 0.5;
 }
 
 .varukorg-ikon {
   position: relative;
+  font-size: 16px;
 }
 
 .varukorg-badge {
-  background-color: #c9856a;
-  color: white;
+  background-color: #1a1a1a;
+  color: #faf9f7;
   border-radius: 50%;
-  padding: 2px 7px;
-  font-size: 12px;
+  padding: 2px 6px;
+  font-size: 10px;
   margin-left: 4px;
+  font-family: 'Inter', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -49,10 +57,10 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    padding: 16px 0;
+    padding: 20px 0;
   }
 
   .header-nav {
-    gap: 16px;
+    gap: 20px;
   }
 }

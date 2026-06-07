@@ -3,9 +3,12 @@ import './Cart.css'
 
 function Cart({ varukorg, onClose, taBort }) {
   const navigate = useNavigate()
+
+  // räkna ut totalpriset för alla produkter i varukorgen
   const totalpris = varukorg.reduce((sum, produkt) => sum + (produkt.price || 0) * (produkt.antal || 1), 0)
 
   return (
+    // klick utanfor drawern stänger varukorgen
     <div className="cart-overlay" onClick={onClose}>
       <div className="cart-drawer" onClick={e => e.stopPropagation()}>
         <div className="cart-header">
@@ -26,7 +29,7 @@ function Cart({ varukorg, onClose, taBort }) {
                     <p className="cart-item-price">{produkt.price ? `${produkt.price} kr` : ''}</p>
                     <p className="cart-item-antal">Antal: {produkt.antal || 1}</p>
                   </div>
-                  <button 
+                  <button
                     className="cart-item-remove"
                     onClick={() => taBort(index)}
                   >
@@ -40,7 +43,8 @@ function Cart({ varukorg, onClose, taBort }) {
                 <span>Totalt</span>
                 <span>{totalpris > 0 ? `${totalpris} kr` : ''}</span>
               </div>
-              <button 
+              {/* navigera till checkout och stäng varukorgen */}
+              <button
                 className="cart-checkout"
                 onClick={() => {
                   onClose()

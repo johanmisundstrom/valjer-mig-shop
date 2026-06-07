@@ -1,27 +1,30 @@
 .orderöversikt {
-  padding: 48px 0;
+  padding: 64px 0;
 }
 
 .orderöversikt h1 {
-  font-size: 32px;
-  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 400;
   letter-spacing: 2px;
   margin-bottom: 48px;
-  color: #c9856a;
+  color: #1a1a1a;
 }
 
 .orderöversikt-innehåll {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
+  align-items: start;
 }
 
 .orderöversikt h2 {
-  font-size: 20px;
-  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 400;
   letter-spacing: 1px;
   margin-bottom: 24px;
-  border-bottom: 1px solid #e8d5c4;
+  border-bottom: 1px solid #e8e2da;
   padding-bottom: 12px;
 }
 
@@ -33,52 +36,107 @@
 }
 
 .orderöversikt-produkt img {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 2px;
+  background: #f5f3f0;
+  flex-shrink: 0;
+}
+
+.orderöversikt-produkt > div {
+  flex: 1;
+}
+
+.orderöversikt-produkt p {
+  margin: 0 0 2px;
+  font-size: 13px;
+}
+
+.orderöversikt-variant,
+.orderöversikt-antal {
+  color: #888;
+  font-size: 11px !important;
+  letter-spacing: 1px;
+}
+
+.orderöversikt-pris {
+  font-weight: 500;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.orderöversikt-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e8e2da;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 .orderöversikt-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .orderöversikt-form input {
-  padding: 12px;
-  border: 1px solid #e8d5c4;
-  border-radius: 6px;
+  padding: 14px 12px;
+  border: 1px solid #e8e2da;
+  border-radius: 0;
   font-size: 14px;
   background: #fff;
-  color: #3a3a3a;
+  color: #1a1a1a;
   outline: none;
+  font-family: 'Inter', sans-serif;
 }
 
 .orderöversikt-form input:focus {
-  border-color: #c9856a;
+  border-color: #1a1a1a;
 }
 
 .orderöversikt-form button {
-  background-color: #c9856a;
-  color: white;
+  background-color: #1a1a1a;
+  color: #faf9f7;
   border: none;
   padding: 16px;
-  border-radius: 6px;
+  border-radius: 0;
   cursor: pointer;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 14px;
-  transition: background-color 0.2s ease;
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  transition: opacity 0.2s ease;
+  margin-top: 8px;
 }
 
-.orderöversikt-form button:hover {
-  background-color: #b8705a;
+.orderöversikt-form button:hover:not(:disabled) {
+  opacity: 0.75;
+}
+
+.orderöversikt-form button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.betalning-fel {
+  color: #c0392b;
+  font-size: 13px;
+  background: #fdf0ef;
+  border: 1px solid #f5c6c2;
+  padding: 10px 14px;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
+  .orderöversikt h1 {
+    font-size: 28px;
+  }
+
   .orderöversikt-innehåll {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 40px;
   }
 }

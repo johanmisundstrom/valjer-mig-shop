@@ -6,11 +6,14 @@ import './ProductList.css'
 function ProductList({ läggTill }) {
   const [products, setProducts] = useState([])
   const [laddar, setLaddar] = useState(true)
+  const [sökterm, setSökterm] = useState('')
+  const [filtreradeProducts, setFiltreradeProducts] = useState([])
 
   useEffect(() => {
     hämtaProdukter()
       .then(data => {
         setProducts(data)
+        setFiltreradeProducts(data)
         setLaddar(false)
       })
       .catch(err => {
@@ -19,19 +22,38 @@ function ProductList({ läggTill }) {
       })
   }, [])
 
-  if (laddar) {
-    return <p>Laddar produkter...</p>
-  }
+  // debounce - väntar 300ms innan sökningen körs
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const resultat = products.filter(p =>
+        p.name.toLowerCase().includes(sökterm.toLowerCase())
+      )
+      setFiltreradeProducts(resultat)
+    }, 300)
 
-  if (products.length === 0) {
-    return <p>Inga produkter hittades.</p>
-  }
+    return () => clearTimeout(timer)
+  }, [sökterm, products])
+
+  if (laddar) return <p className="product-list-status">Laddar produkter...</p>
 
   return (
-    <div className="product-list">
-      {products.map(product => (
-        <ProductCard key={product.id} product={product} läggTill={läggTill} />
-      ))}
+    <div className="product-list-wrapper">
+      <div className="hero">
+        <p className="hero-tagline">För dig som alltid visste vem du var.</p>
+        <h1 className="hero-titel">Väljer Mig.</h1>
+      </div>
+      <input
+        className="sök-input"
+        type="text"
+        placeholder="Sök produkt..."
+        value={sökterm}
+        onChange={e => setSökterm(e.target.value)}
+      />
+      <div className="product-list">
+        {filtreradeProducts.map(product => (
+          <ProductCard key={product.id} product={product} läggTill={läggTill} />
+        ))}
+      </div>
     </div>
   )
 }
