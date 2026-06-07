@@ -10,16 +10,18 @@ function ProductList({ läggTill }) {
   const [filtreradeProducts, setFiltreradeProducts] = useState([])
 
   useEffect(() => {
-    hämtaProdukter()
-      .then(data => {
+    async function hämta() {
+      try {
+        const data = await hämtaProdukter()
         setProducts(data)
         setFiltreradeProducts(data)
+      } catch (err) {
+        console.error('Fel vid hämtning av produkter:', err)
+      } finally {
         setLaddar(false)
-      })
-      .catch(err => {
-        console.error('Fel:', err)
-        setLaddar(false)
-      })
+      }
+    }
+    hämta()
   }, [])
 
   // debounce - väntar 300ms innan sökningen körs
