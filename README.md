@@ -1,26 +1,28 @@
-Valjer Mig Shop
+# Valjer Mig Shop
 
 En webbshop byggd med React som skolprojekt. Produkterna hämtas från Printful API. Man kan bläddra bland produkter, lägga till i varukorgen och fylla i sina uppgifter för att lägga en order.
 
-Installera och starta
+## Installera och starta
 
 Klona repot och öppna mappen i terminalen.
 
-npm install
+git clone https://github.com/johanmisundstrom/valjer-mig-shop.git
+cd valjer-mig-shop
+npm install 
 npm run dev
 
-Sen öppnar du länken som visas i terminal i en webbläsare.
+Sen öppnar du länken som visas i terminalen i webbläsaren.
 
-API-nyckel
+## API-nyckel
 
-Projektet använder Printful API. Du behöver en egen API-nyckel i en .env fil:
+Du behöver en egen API-nyckel i en .env fil i projektmappen:
 
 VITE_PRINTFUL_API_KEY=din_nyckel_här
 
-Debounce
+## Debounce
 
-Sökfunktionen på startsidan använder debounce. Det betyder att sökningen inte körs direkt när man skriver utan väntar 300 ms efter att man slutat skriva. Det är gjort med setTimeout och clearTimeout i en useEffect.
+Sökfunktionen använder debounce. Den väntar 300ms efter att man slutat skriva innan sökningen körs. Det är gjort med setTimeout och clearTimeout i en useEffect.
 
-Felhantering
+## Felhantering
 
-API-anropen använder try/catch så att om något går fel visas ett felmneddelande i konsolen istället för att appen kraschar. 
+API-anropen använder try/catch så att om något går fel visas ett felmeddelande i konsolen istället för att appen kraschar.
