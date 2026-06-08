@@ -81,7 +81,7 @@ function Checkout({ varukorg }) {
           <input name="adress" placeholder="Adress" value={formData.adress} onChange={hanteraInput} required />
           <input name="postnummer" placeholder="Postnummer" value={formData.postnummer} onChange={hanteraInput} required />
           <input name="stad" placeholder="Stad" value={formData.stad} onChange={hanteraInput} required />
-          <button type="submit">Lägg till order</button>
+          <button type="submit">Köp</button>
         </form>
 
       </div>

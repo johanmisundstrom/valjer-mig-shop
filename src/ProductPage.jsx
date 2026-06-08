@@ -18,7 +18,7 @@ function ProductPage({ läggTill }) {
   const beskrivningar = {
     'Main Character tshirt': 'Du vet redan att du är huvudpersonen i din egen story. Nu kan din morgonkaffe bekräfta det också.',
     'Slay tshirt': 'Ingen förklaring behövs. Det vet du redan.',
-    'Queen tshirt': 'Inte en titel du ansöker om. En du föds med — och påminner dig om varje morgon.',
+    'Queen tshirt': 'Inte en titel du ansöker om. En du föds med och påminner dig om varje morgon.',
     "Broke boys don't deserve no pussy tshirt": 'En påminnelse. En livsstil. En vardagströja.',
     'Fuck around and find out tshirt': 'För dig som är trött på att vara snäll hela tiden. Med konsekvenser.',
     'Que sera sera tshirt': 'Det som händer, händer. Släpp taget, lev livet.',
