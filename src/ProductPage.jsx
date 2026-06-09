@@ -42,7 +42,6 @@ function ProductPage({ läggTill }) {
   if (laddar) return <p className="product-page-status">Laddar produkt...</p>
   if (fel) return <p className="product-page-status">{fel}</p>
   if (!produkt) return <p className="product-page-status">Produkten hittades inte.</p>
-  console.log(produkt.name)
 
   // hämta priset från den valda varianten
   const pris = valdVariant ? parseFloat(valdVariant.retail_price) : null
