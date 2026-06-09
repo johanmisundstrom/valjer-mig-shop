@@ -16,7 +16,7 @@ function OmOss() {
 
         <div className="om-oss-block">
           <h2>Hur det fungerar</h2>
-          <p>Allt tillverkas när du beställer och inget ligger på lager, inget slösas. Print-on-demand betyder att din t-shirt trycks just för dig, och skickas direkt. Leverans inom EU.</p>
+          <p>Allt tillverkas när du beställer och inget ligger på lager. Print-on-demand betyder att din t-shirt trycks just för dig, och skickas direkt. Leverans inom EU.</p>
         </div>
       </div>
     </div>

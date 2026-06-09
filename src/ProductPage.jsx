@@ -16,13 +16,10 @@ function ProductPage({ läggTill }) {
 
   // produktbeskrivningar kopplade till produktnamn
   const beskrivningar = {
-    'Main Character tshirt': 'Du vet redan att du är huvudpersonen i din egen story. Nu kan din morgonkaffe bekräfta det också.',
-    'Slay tshirt': 'Ingen förklaring behövs. Det vet du redan.',
-    'Queen tshirt': 'Inte en titel du ansöker om. En du föds med och påminner dig om varje morgon.',
-    "Broke boys don't deserve no pussy tshirt": 'En påminnelse. En livsstil. En vardagströja.',
-    'Fuck around and find out tshirt': 'För dig som är trött på att vara snäll hela tiden. Med konsekvenser.',
-    'Que sera sera tshirt': 'Det som händer, händer. Släpp taget, lev livet.',
-    'Main Character Mugg': 'Du vet redan att du är huvudpersonen i din egen story. Nu kan din morgonkaffe bekräfta det också.'
+    'Main Character tshirt': 'Du vet redan att du är huvudpersonen i din egen story.',
+    "Broke boys don't deserve no pussy tshirt": 'En påminnelse. En livsstil.',
+    'Fuck around and find out tshirt': 'För dig som är trött på att vara snäll hela tiden.',
+    'Que sera sera black tshirt': 'Det som händer, händer. Släpp taget, lev livet.'
   }
 
   // hämta produktdata från Printful när id ändras
@@ -45,6 +42,7 @@ function ProductPage({ läggTill }) {
   if (laddar) return <p className="product-page-status">Laddar produkt...</p>
   if (fel) return <p className="product-page-status">{fel}</p>
   if (!produkt) return <p className="product-page-status">Produkten hittades inte.</p>
+  console.log(produkt.name)
 
   // hämta priset från den valda varianten
   const pris = valdVariant ? parseFloat(valdVariant.retail_price) : null
@@ -71,7 +69,7 @@ function ProductPage({ läggTill }) {
       <div className="product-page-info">
         <h1>{produkt.name}</h1>
         <p className="product-page-description">
-          {beskrivningar[produkt.name] || ''}
+          {Object.entries(beskrivningar).find(([key]) => key.toLowerCase() === produkt.name.toLowerCase())?.[1] || ''}
         </p>
 
         {/* visa dropdown om det finns flera varianter */}
